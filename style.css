@@ -1,0 +1,925 @@
+/* ===========================
+   Splash Screen
+=========================== */
+
+.splash-screen{
+    position:fixed;
+    inset:0;
+    background:#071a2d;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    transition:1s;
+}
+
+.fade-out{
+    opacity:0;
+    visibility:hidden;
+}
+
+.splash-icon{
+    font-size:90px;
+    color:#d4af37;
+    animation:bounce 1.5s infinite;
+}
+
+.splash-title{
+    color:white;
+    font-size:52px;
+    font-weight:800;
+    margin-top:25px;
+}
+
+.loader{
+    width:60px;
+    height:60px;
+    border:5px solid rgba(255,255,255,.2);
+    border-top:5px solid #d4af37;
+    border-radius:50%;
+    margin:auto;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes bounce{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-12px);
+    }
+}
+/* ===========================================
+   GOOGLE FONT
+=========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===========================================
+   GLOBAL
+=========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f8f9fa;
+    color:#222;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* ===========================================
+   COLORS
+=========================================== */
+
+:root{
+
+    --gold:#d4af37;
+    --gold-dark:#b78c20;
+
+    --navy:#071a2d;
+    --black:#111111;
+
+    --white:#ffffff;
+
+    --gray:#6c757d;
+
+    --light:#f8f9fa;
+
+}
+
+/* ===========================================
+   NAVBAR
+=========================================== */
+
+.navbar{
+
+    background:var(--navy)!important;
+
+    transition:.4s;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+
+}
+
+.navbar-brand{
+
+    font-size:1.8rem;
+
+    color:var(--gold)!important;
+
+    font-weight:700;
+
+}
+
+.nav-link{
+
+    color:white!important;
+
+    margin-left:15px;
+
+    transition:.3s;
+
+    font-weight:500;
+
+}
+
+.nav-link:hover{
+
+    color:var(--gold)!important;
+
+}
+
+.nav-link.active{
+
+    color:var(--gold)!important;
+
+}
+
+.navbar .btn{
+
+    border-radius:40px;
+
+    padding:10px 25px;
+
+    font-weight:600;
+
+}
+
+/* ===========================================
+   HERO
+=========================================== */
+
+.hero-section{
+
+    min-height:95vh;
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+
+}
+
+.hero-section h1{
+
+    font-size:4rem;
+
+    font-weight:800;
+
+}
+
+.hero-section p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+.hero-section img{
+
+    border-radius:25px;
+
+    transition:.4s;
+
+}
+
+.hero-section img:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* ===========================================
+   BUTTONS
+=========================================== */
+
+.btn-warning{
+
+    background:var(--gold);
+
+    border:none;
+
+    color:black;
+
+    font-weight:600;
+
+}
+
+.btn-warning:hover{
+
+    background:var(--gold-dark);
+
+}
+
+.btn-outline-light:hover{
+
+    color:black!important;
+
+}
+/* ===========================
+   Floating Buttons
+=========================== */
+
+.floating-call,
+.floating-whatsapp{
+
+    position:fixed;
+
+    right:25px;
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    font-size:26px;
+
+    text-decoration:none;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+
+    z-index:9999;
+
+    transition:.35s;
+
+}
+
+.floating-call{
+
+    bottom:105px;
+
+    background:#d4af37;
+
+    color:#000;
+
+}
+
+.floating-whatsapp{
+
+    bottom:30px;
+
+    background:#25D366;
+
+}
+
+.floating-call:hover,
+.floating-whatsapp:hover{
+
+    transform:scale(1.15);
+
+    color:white;
+
+}
+
+.floating-call:hover{
+
+    background:#b78c20;
+
+}
+
+/* ===========================================
+   SECTION TITLE
+=========================================== */
+
+section{
+
+    padding-top:90px;
+
+    padding-bottom:90px;
+
+}
+
+section span{
+
+    letter-spacing:2px;
+
+}
+
+section h2{
+
+    font-weight:800;
+
+}
+
+/* ===========================================
+   ABOUT
+=========================================== */
+
+.card{
+
+    border-radius:20px;
+
+}
+
+.card img{
+
+    border-radius:20px 20px 0 0;
+
+}
+
+.card-body{
+
+    padding:30px;
+
+}
+
+.card i{
+
+    transition:.4s;
+
+}
+
+.card:hover i{
+
+    transform:rotate(8deg) scale(1.15);
+
+}
+
+.about img{
+
+    border-radius:25px;
+
+}
+
+/* ===========================================
+   SERVICE CARD
+=========================================== */
+
+.service-card{
+
+    overflow:hidden;
+
+    transition:.4s;
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 45px rgba(0,0,0,.2)!important;
+
+}
+
+.service-card img{
+
+    height:220px;
+
+    object-fit:cover;
+
+}
+
+.service-icon{
+
+    height:70px;
+
+    width:70px;
+
+    border-radius:50%;
+
+    background:#fff8e4;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* ===========================================
+   WHY CHOOSE US
+=========================================== */
+
+.why-card{
+
+    transition:.4s;
+
+}
+
+.why-card:hover{
+
+    transform:translateY(-10px);
+
+    background:var(--navy);
+
+}
+
+.why-card:hover h4{
+
+    color:white;
+
+}
+
+.why-card:hover p{
+
+    color:#ddd!important;
+
+}
+/* ===========================================
+   STATISTICS SECTION
+=========================================== */
+
+.stats-section{
+    background:linear-gradient(rgba(7,26,45,.95),rgba(7,26,45,.95)),
+    url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.stat-card{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15)!important;
+    backdrop-filter:blur(8px);
+    border-radius:20px;
+    transition:.4s;
+}
+
+.stat-card:hover{
+    transform:translateY(-10px);
+    background:rgba(212,175,55,.15);
+}
+
+/* ===========================================
+   TESTIMONIALS
+=========================================== */
+
+.testimonial-card{
+    border-radius:20px;
+    transition:.4s;
+}
+
+.testimonial-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.18)!important;
+}
+
+.testimonial-card img{
+    width:80px;
+    height:80px;
+    object-fit:cover;
+}
+
+.testimonial-card p{
+    line-height:1.8;
+}
+
+/* ===========================================
+   CTA SECTION
+=========================================== */
+
+.cta-section{
+    background:#f8f9fa;
+}
+
+.cta-section .card{
+    background:linear-gradient(135deg,#071a2d,#102d4b)!important;
+    border-radius:25px;
+}
+
+.cta-section .btn{
+    min-width:190px;
+}
+
+/* ===========================================
+   FOOTER
+=========================================== */
+
+footer{
+    background:#071a2d!important;
+}
+
+footer h3,
+footer h5{
+    color:var(--gold);
+}
+
+.footer-link{
+    color:#ddd;
+    transition:.3s;
+}
+
+.footer-link:hover{
+    color:var(--gold);
+    padding-left:8px;
+}
+
+footer p{
+    color:#ddd;
+        line-height:1.8;
+}
+
+footer .btn{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* ===========================================
+   CONTACT PAGE
+=========================================== */
+
+form .form-control{
+    border-radius:12px;
+    padding:14px;
+    border:1px solid #ddd;
+    box-shadow:none;
+}
+
+form .form-control:focus{
+    border-color:var(--gold);
+    box-shadow:0 0 0 .2rem rgba(212,175,55,.25);
+}
+
+textarea{
+    resize:none;
+}
+
+iframe{
+    display:block;
+}
+
+/* ===========================================
+   DRIVERS PAGE
+=========================================== */
+
+.list-group-item{
+    padding:18px 20px;
+    border:none;
+    border-bottom:1px solid #eee;
+}
+
+.list-group-item:last-child{
+    border-bottom:none;
+}
+
+.accordion-button:not(.collapsed){
+    background:var(--gold);
+    color:#000;
+    font-weight:600;
+}
+
+.accordion-button:focus{
+    box-shadow:none;
+}
+
+/* ===========================================
+   SERVICES PAGE
+=========================================== */
+
+.bg-dark{
+    background:#071a2d!important;
+}
+
+.badge{
+    font-size:.9rem;
+    padding:10px 18px;
+    border-radius:30px;
+}
+
+.display-3,
+.display-4,
+.display-5{
+    font-weight:800;
+}
+
+.shadow-lg{
+    box-shadow:0 1rem 3rem rgba(0,0,0,.2)!important;
+}
+
+/* ===========================================
+   HOVER EFFECTS
+=========================================== */
+
+.card{
+    transition:.35s ease;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.btn{
+    transition:.35s ease;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+img{
+    transition:.35s ease;
+}
+
+img:hover{
+    transform:scale(1.02);
+}
+
+/* ===========================================
+   SCROLLBAR
+=========================================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#071a2d;
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--gold);
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:var(--gold-dark);
+}
+/* ===========================================
+   ANIMATIONS
+=========================================== */
+
+@keyframes fadeUp {
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from{
+        opacity:0;
+        transform:scale(.9);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.hero-section,
+.service-card,
+.why-card,
+.stat-card,
+.testimonial-card,
+.cta-section .card{
+    animation:fadeUp .8s ease;
+}
+
+.hero-section img{
+    animation:zoomIn 1s ease;
+}
+
+/* ===========================================
+   UTILITIES
+=========================================== */
+
+.text-gold{
+    color:var(--gold)!important;
+}
+
+.bg-gold{
+    background:var(--gold)!important;
+}
+
+.bg-navy{
+    background:var(--navy)!important;
+}
+
+.rounded-20{
+    border-radius:20px;
+}
+
+.rounded-30{
+    border-radius:30px;
+}
+
+.transition{
+    transition:.35s ease;
+}
+
+.shadow-hover:hover{
+    box-shadow:0 20px 40px rgba(0,0,0,.18)!important;
+}
+
+.section-title{
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.section-subtitle{
+    color:#777;
+    max-width:700px;
+    margin:auto;
+}
+
+/* ===========================================
+   RESPONSIVE - TABLET
+=========================================== */
+
+@media (max-width:991px){
+
+.hero-section{
+    min-height:auto;
+    padding:100px 0;
+    text-align:center;
+}
+
+.hero-section h1{
+    font-size:2.8rem;
+}
+
+.display-3{
+    font-size:2.7rem;
+}
+
+.display-4{
+    font-size:2.5rem;
+}
+
+.display-5{
+    font-size:2rem;
+}
+
+.navbar-brand{
+    font-size:1.5rem;
+}
+
+section{
+    padding:70px 0;
+}
+
+.card-body{
+    padding:25px;
+}
+
+}
+
+/* ===========================================
+   RESPONSIVE - MOBILE
+=========================================== */
+
+@media (max-width:768px){
+
+.hero-section h1{
+    font-size:2.2rem;
+}
+
+.hero-section p{
+    font-size:16px;
+}
+
+.display-3{
+    font-size:2.2rem;
+}
+
+.display-4{
+    font-size:2rem;
+}
+
+.display-5{
+    font-size:1.8rem;
+}
+
+.btn-lg{
+    width:100%;
+    margin-bottom:10px;
+}
+
+.navbar .btn{
+    width:100%;
+}
+
+footer{
+    text-align:center;
+}
+
+footer .btn{
+    margin-bottom:10px;
+}
+
+.card-body{
+    padding:20px;
+}
+
+}
+
+/* ===========================================
+   SMALL DEVICES
+=========================================== */
+
+@media (max-width:576px){
+
+.hero-section{
+    padding:70px 0;
+}
+
+.hero-section h1{
+    font-size:1.9rem;
+}
+
+.hero-section img{
+    margin-top:30px;
+}
+
+section{
+    padding:60px 0;
+}
+
+.badge{
+    font-size:.75rem;
+}
+
+.navbar-brand{
+    font-size:1.3rem;
+}
+
+}
+
+/* ===========================================
+   EXTRA POLISH
+=========================================== */
+
+html{
+    scroll-behavior:smooth;
+}
+
+::selection{
+    background:var(--gold);
+    color:#000;
+}
+
+.card,
+.btn,
+img,
+.nav-link{
+    transition:all .35s ease;
+}
+
+.service-card:hover,
+.why-card:hover,
+.stat-card:hover,
+.testimonial-card:hover{
+    cursor:pointer;
+}
+
+footer hr{
+    opacity:.2;
+}
+
+input::placeholder,
+textarea::placeholder{
+    color:#999;
+}
+
+.form-control{
+    font-size:15px;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+/* ===========================================
+   END OF FILE
+=========================================== */

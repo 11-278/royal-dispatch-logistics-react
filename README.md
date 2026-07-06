@@ -1,157 +1,16 @@
-v# 🚚 Royal Dispatch Logistics
+# React + Vite
 
-A modern, premium, and fully responsive Truck Dispatch Company website built with **React**, **Vite**, **Bootstrap 5**, and **React Router**.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-This project was developed as **Internship Task #4** for **UDevs**, assigned by **Usama Aslam (Founder & CEO)**.
+Currently, two official plugins are available:
 
----
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## 📸 Preview
+## React Compiler
 
-> Add screenshots here after uploading.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-Example:
+## Expanding the ESLint configuration
 
-![Home Page](screenshots/home.png)
-
----
-
-## ✨ Features
-
-- Professional Splash Screen
-- Responsive Navigation Bar
-- Hero Banner
-- About Section
-- Services Section
-- Why Choose Us
-- Statistics
-- Customer Testimonials
-- Call To Action
-- Drivers Page
-- Contact Page
-- Floating Call Button
-- Floating WhatsApp Button
-- Google Maps Integration
-- Royal Black & Gold Theme
-- Mobile Responsive
-- Premium UI/UX
-
----
-
-## 🛠 Built With
-
-- React
-- Vite
-- Bootstrap 5
-- React Router DOM
-- Font Awesome
-- CSS3
-- JavaScript (ES6)
-
----
-
-## 📂 Project Structure
-
-```
-src/
-│
-├── assets/
-│   └── css/
-│       └── style.css
-│
-├── components/
-│   ├── Navbar.jsx
-│   ├── Hero.jsx
-│   ├── About.jsx
-│   ├── ServicesSection.jsx
-│   ├── ServiceCard.jsx
-│   ├── WhyChooseUs.jsx
-│   ├── Statistics.jsx
-│   ├── Testimonials.jsx
-│   ├── TestimonialCard.jsx
-│   ├── CTA.jsx
-│   ├── Footer.jsx
-│   ├── SplashScreen.jsx
-│   └── FloatingButtons.jsx
-│
-├── pages/
-│   ├── Home.jsx
-│   ├── Services.jsx
-│   ├── Drivers.jsx
-│   └── Contact.jsx
-│
-├── App.jsx
-└── main.jsx
-```
-
----
-
-## 📱 Responsive
-
-- Desktop
-- Laptop
-- Tablet
-- Mobile
-
----
-
-## 🚀 Installation
-
-Clone the repository
-
-```bash
-git clone https://github.com/YOUR_USERNAME/royal-dispatch-logistics.git
-```
-
-Go inside the folder
-
-```bash
-cd royal-dispatch-logistics
-```
-
-Install dependencies
-
-```bash
-npm install
-```
-
-Run the project
-
-```bash
-npm run dev
-```
-
----
-
-## 📷 Screenshots
-
-### Home
-
-(Add Screenshot)
-
-### Services
-
-(Add Screenshot)
-
-### Drivers
-
-(Add Screenshot)
-
-### Contact
-
-(Add Screenshot)
-
----
-
-## 👨‍💻 Author
-
-**Your Name**
-
-GitHub:
-https://github.com/YOUR_USERNAME
-
----
-
-## 📄 License
-
-This project is created for educational and internship purposes.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
